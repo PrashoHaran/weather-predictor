@@ -40,7 +40,7 @@ df = pd.read_csv("data/weather_classification_data.csv")
 menu = ["Home", "Data Exploration", "Visualisations", "Prediction", "Model Performance", "About"]
 choice = st.sidebar.selectbox("📂 Menu", menu)
 
-# -------------------- HOME --------------------
+#  HOME PAGE
 if choice == "Home":
     st.markdown('<p class="big-font">🌦 Weather Prediction App</p>', unsafe_allow_html=True)
     st.write("Predict weather types like **Sunny**, **Rainy**, **Cloudy**, and more using real meteorological data.")
@@ -117,7 +117,7 @@ elif choice == "Data Exploration":
         st.warning("⚠ No numeric columns found in the dataset.")
 
 
-
+# DATA VISUALISATION
 elif choice == "Visualisations":
     st.subheader("📊 Weather Data Visualisations")
 
@@ -157,6 +157,7 @@ elif choice == "Visualisations":
         st.pyplot(fig3)
 
 
+# PREDICTION
 elif choice == "Prediction":
     st.subheader("🔮 Weather Prediction")
     st.write("Enter a few details and click **Predict** to see the weather type.")
@@ -210,7 +211,7 @@ elif choice == "Prediction":
             st.error(f"Error during prediction: {e}")
 
 
-
+# MODEL PERFORMANCE
 elif choice == "Model Performance":
     st.subheader("📋 Model Performance")
     st.markdown("This section shows how well our trained models performed on the test data.")
@@ -266,7 +267,7 @@ elif choice == "Model Performance":
         st.info("⚠ Model comparison is not available because both models were not saved separately.")
 
 
-#  ABOUT Section
+# ABOUT Section
 elif choice == "About":
     st.markdown('<h2 style="color:#00c6ff;">ℹ️ About This Project</h2>', unsafe_allow_html=True)
     st.write("""
