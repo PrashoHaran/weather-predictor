@@ -29,7 +29,7 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-# === Load model and training columns ===
+# Load model and training columns
 model = pickle.load(open("model.pkl", "rb"))
 train_columns = pickle.load(open("train_columns.pkl", "rb"))
 
