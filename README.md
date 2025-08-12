@@ -21,22 +21,6 @@ This app predicts **weather type** (Sunny, Rainy, Cloudy, Snowy, etc.) based on 
 
 ---
 
-## 📂 Project Structure
-
-Weather-Predictor/
-├── app.py # Main Streamlit application
-├── requirements.txt # Dependencies
-├── model.pkl # Best trained model (Random Forest)
-├── log_reg_model.pkl # Logistic Regression model
-├── rf_model.pkl # Random Forest model
-├── train_columns.pkl # Feature columns used for training
-├── data/
-│ └── weather_classification_data.csv # Dataset
-├── notebooks/
-│ └── model_training.ipynb # Model training & analysis
-└── README.md # Project documentation
-
-
 ###  Clone the Repository
 ```bash
 git clone https://github.com/PrashoHaran/weather-predictor.git
@@ -74,4 +58,4 @@ git clone https://github.com/PrashoHaran/weather-predictor.git
 
 ### 🌍 Live Demo
 
-Try it here:
+Try it here:  https://prashoharan-weather-predictor-app-e6opfx.streamlit.app/
