@@ -21,9 +21,13 @@ This app predicts **weather type** (Sunny, Rainy, Cloudy, Snowy, etc.) based on 
 
 ---
 
-###  Clone the Repository
+
+## ⚙️ Installation & Setup
+
+### 1️⃣ Clone the Repository
 ```bash
 git clone https://github.com/PrashoHaran/weather-predictor.git
+
 
 ### 📊 Machine Learning Workflow
 
@@ -58,4 +62,4 @@ git clone https://github.com/PrashoHaran/weather-predictor.git
 
 ### 🌍 Live Demo
 
-Try it here:  https://prashoharan-weather-predictor-app-e6opfx.streamlit.app/
+Try it here: https://prashoharan-weather-predictor-app-e6opfx.streamlit.app/
