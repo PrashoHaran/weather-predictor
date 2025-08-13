@@ -88,7 +88,7 @@ elif choice == "Data Exploration":
     st.markdown("### Select Columns to View")
     columns = st.multiselect("Choose columns", list(df.columns), default=list(df.columns))
     
-    if columns:  # Only display if user selected columns
+    if columns: 
         st.dataframe(df[columns].head(20), use_container_width=True)
     else:
         st.warning("⚠ Please select at least one column to display.")
