@@ -66,7 +66,7 @@ if choice == "Home":
     ]
     st.info(random.choice(weather_facts))
 
-
+# DATA EXPLORATION
 elif choice == "Data Exploration":
     st.markdown('<h2 style="color:#00c6ff;">🔍 Data Exploration</h2>', unsafe_allow_html=True)
     st.write("Explore the dataset, view sample records, and filter data interactively.")
@@ -81,11 +81,11 @@ elif choice == "Data Exploration":
         st.metric("❓ Missing Values", int(df.isnull().sum().sum()))
 
     # Dataset preview
-    st.markdown("### 📌 Dataset Overview")
+    st.markdown("### Dataset Overview")
     st.dataframe(df.head(10), use_container_width=True)
 
     # Column selector
-    st.markdown("### 🛠 Select Columns to View")
+    st.markdown("### Select Columns to View")
     columns = st.multiselect("Choose columns", list(df.columns), default=list(df.columns))
     
     if columns:  # Only display if user selected columns
@@ -108,7 +108,7 @@ elif choice == "Data Exploration":
         st.dataframe(filtered_df, use_container_width=True)
 
         # Quick visualization
-        st.markdown("### 📊 Quick Distribution Plot")
+        st.markdown("### Quick Distribution Plot")
         sns.set_theme(style="darkgrid")
         fig, ax = plt.subplots()
         sns.histplot(df[selected_col], bins=20, kde=True, color="#00c6ff", ax=ax)
@@ -119,7 +119,7 @@ elif choice == "Data Exploration":
 
 # DATA VISUALISATION
 elif choice == "Visualisations":
-    st.subheader("📊 Weather Data Visualisations")
+    st.subheader("Weather Data Visualisations")
 
     #Bar Chart - Select feature to compare by season
     st.markdown("### Average Values by Season")
@@ -159,7 +159,7 @@ elif choice == "Visualisations":
 
 # PREDICTION
 elif choice == "Prediction":
-    st.subheader("🔮 Weather Prediction")
+    st.subheader("Weather Prediction")
     st.write("Enter a few details and click **Predict** to see the weather type.")
 
     # Simple user inputs
@@ -169,7 +169,7 @@ elif choice == "Prediction":
     season = st.selectbox("🍂 Season", df["Season"].unique())
     location = st.selectbox("📍 Location", df["Location"].unique())
 
-    if st.button("🚀 Predict"):
+    if st.button("Predict"):
         try:
             # Fill missing inputs with defaults from dataset
             default_values = df.mode().iloc[0]  
@@ -205,7 +205,7 @@ elif choice == "Prediction":
             confidence = model.predict_proba(input_encoded).max() * 100
 
             st.success(f"**Predicted Weather Type:** {prediction}")
-            st.info(f"💡 Prediction Confidence: {confidence:.2f}%")
+            st.info(f"Prediction Confidence: {confidence:.2f}%")
 
         except Exception as e:
             st.error(f"Error during prediction: {e}")
@@ -213,7 +213,7 @@ elif choice == "Prediction":
 
 # MODEL PERFORMANCE
 elif choice == "Model Performance":
-    st.subheader("📋 Model Performance")
+    st.subheader("Model Performance")
     st.markdown("This section shows how well our trained models performed on the test data.")
 
     from sklearn.metrics import classification_report, confusion_matrix, ConfusionMatrixDisplay
